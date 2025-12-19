@@ -1,0 +1,113 @@
+:root {
+  --primary: #BFBFBF;
+}
+
+
+html {
+  overflow-x: clip;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+
+body {
+  background-color: var(--primary);
+  margin: 0;
+}
+
+
+header {
+  #container-cover {
+    font-family: "Segoe UI";
+    font-size: 2em;
+    font-weight: bold;
+    justify-self: center;
+    padding: 0.5em 1em;
+    text-align: center;
+    width: 80vw;
+
+    > #subtitle-hiragana {
+      &:hover::before {
+        content: "Hiragana";
+      }
+      
+      &::before {
+        content: "ひらがな";
+      }
+    }
+
+    > #subtitle-katakana {
+      &:hover::before {
+        content: "Katakana";
+      }
+
+      &::before {
+        content: "カタカナ";
+      }
+    }
+
+    > #subtitle-kanji {
+      &:hover::before {
+        content: "Kanji";
+      }
+
+      &::before {
+        content: "漢字";
+      }
+    }
+  }
+}
+
+
+main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  
+  > section {
+    background-color: white;
+    border: 2px solid darkgray;
+    border-radius: 13px;
+    padding: 1em 1em;
+    width: 60vw;
+
+    ul {
+      font-family: sans-serif;
+      font-size: 0.8em;
+      margin: 0;
+    }
+    
+    > .title {
+      font-family: arial;
+      font-size: 1.25em;
+      font-weight: bold;
+    }
+
+    > p {
+      font-family: sans-serif;
+      font-size: 0.8em;
+      margin: 0;
+      padding-top: 0.5em;
+      text-indent: 1em;
+    }
+  }
+}
+
+
+footer {
+  padding: 0.5em;
+
+  #container-credits {
+    font-family: monospace;
+    justify-self: center;
+    padding: 1em 0.5em;
+    text-align: center;
+    width: 70vw;
+
+    > a {
+      color: gray;
+      text-decoration: none;
+    }
+  }
+}
